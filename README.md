@@ -81,5 +81,5 @@ Computational Linguistics](https://acl2020.org/)
 - [CrisisNLP](https://crisisnlp.qcri.org/) - contains a decent number of resources for research on crisis informatics topics.
 - [CrisisLex](https://crisislex.org/) - a repository of crisis-related social media data and tools including collections of crisis data and a lexicon of crisis terms.
 
-#### Contribution
+### Contribution
 The items included here so far are by no means completed but used as a starting point for the community's effort to make this list better and comprehensive. Hence, this repository welcomes the contribution from the community. If you find any items missed here, just pull requests to add them or email me at [wangcongcongcc@gmail.com](#).
