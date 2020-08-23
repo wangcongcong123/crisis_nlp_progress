@@ -118,33 +118,3 @@ def get_replies(tweet_id="1294009088435580928", user_name="@ira"):
             logger.error("Failed while fetching replies {}".format(e))
             break
 
-
-if __name__ == '__main__':
-    # get posts by ids
-    # tweets_success, tweets_fail=acquire_from_twitter_api(["1248552109240283136"])
-    # print(tweets_success)
-
-    # online listening
-    # stream_listener = OnlineListener(config={"write_path":os.path.join("streammed_tweets","china_en.json")})
-    # stream = tweepy.Stream(auth=api.auth, listener=stream_listener)
-    # stream.filter(track=["Beirut","explosion"])
-    # stream.filter(languages=["en"])
-    # stream.sample(languages=["en"])
-
-    #
-    # results=search_tweets(query="Beirut AND explosion",max_tweets=1000)
-    # print(len(results))
-    # write2file(results,path=os.path.join("searched_tweets","beirut2020.json"))
-    #
-    # get replies of a post by a user
-    get_replies(tweet_id="1294009088435580928", user_name="@ira")
-
-    #
-    # # other functions including get followers and following users, timeline and profile details of a user
-    print(len(get_followers(screen_name="DanielCorbett_")))
-    print(len(get_following(screen_name="DanielCorbett_")))
-    print(len(get_user_timeline(screen_name="DanielCorbett_")))
-    users = api.lookup_users(screen_names=["WangcongcongCC","DanielCorbett_"])
-    for user in users:
-        user_id=user["id"]
-        print(user)  # I can get my id 735080426956431360 from here
