@@ -27,14 +27,14 @@
 ### Tools
 - [TweetsRetrieval](tools/TweetsRetrieval) - very fast Java-based tweets retrieval via tweets ids.
 - [TweepyCalls](tools/TweepyCalls) - various functions for calling Twitter-API using Tweepy.
-- [Twarc](https://github.com/DocNow/twarc) - A command line tool (and Python library) for archiving Twitter JSON.
+- [Twarc](https://github.com/DocNow/twarc) - a command line tool (and Python library) for archiving Twitter JSON.
 
 <a name="papers"></a>
 ### Papers
 
 #### Transformers relevant
-- 2020: [COVID-Twitter-BERT: A Natural Language Processing Model to Analyse COVID-19 Content on Twitter](https://arxiv.org/abs/2005.07503)
-- 2020: [CrisisBERT: a Robust Transformer for Crisis Classification and Contextual Crisis Embedding](https://arxiv.org/abs/2005.06627) -crisis tweets recognition and classification
+- 2020: [COVID-Twitter-BERT: A Natural Language Processing Model to Analyse COVID-19 Content on Twitter](https://arxiv.org/abs/2005.07503) -pre-training.
+- 2020: [CrisisBERT: a Robust Transformer for Crisis Classification and Contextual Crisis Embedding](https://arxiv.org/abs/2005.06627) -crisis tweets recognition and classification.
 
 #### Other NNs relevant
 - 2020: [On Identifying Hashtags in Disaster Twitter Data](https://arxiv.org/abs/2001.01323) - Multi-task learning, classification, LSTM.
@@ -79,7 +79,7 @@ Computational Linguistics](https://acl2020.org/)
 ### Misc.
 
 - [CrisisNLP](https://crisisnlp.qcri.org/) - contains a decent number of resources for research on crisis informatics topics.
-- [CrisisLex](https://crisislex.org/) - a repository of crisis-related social media data and tools including collections of crisis data and a lexicon of crisis terms
+- [CrisisLex](https://crisislex.org/) - a repository of crisis-related social media data and tools including collections of crisis data and a lexicon of crisis terms.
 
 #### Contribution
 The items included here so far are by no means completed but used as a starting point for the community's effort to make this list better and comprehensive. Hence, this repository welcomes the contribution from the community. If you find any items missed here, just pull requests to add them or email me at [wangcongcongcc@gmail.com](#).
