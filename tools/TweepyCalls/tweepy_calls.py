@@ -90,7 +90,7 @@ def get_user_timeline(screen_name):
     return timeline
 
 
-def get_replies(tweet_id="1294009088435580928", user_name="@ira"):
+def get_replies(tweet_id="xxxx", user_name="@wangcongcongcc"):
     api = tweepy.API(auth, wait_on_rate_limit=True)
 
     replies = tweepy.Cursor(api.search, q='to:{}'.format(user_name), since_id=tweet_id, tweet_mode='extended').items()
