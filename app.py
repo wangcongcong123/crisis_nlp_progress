@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from collections import Counter
 # streamlit run app.py
 import logging
-
+st.set_option('deprecation.showPyplotGlobalUse', False)
 logging.basicConfig(
     format="%(asctime)s - %(levelname)s - %(name)s -   %(message)s",
     datefmt="%m/%d/%Y %H:%M:%S",
