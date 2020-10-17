@@ -11,8 +11,14 @@
 
 <a name="datasets"></a>
 ### Datasets
-
 [Data Explorer](https://share.streamlit.io/wangcongcong123/crisis_nlp_progress/app.py)
+
+<p align="center">
+    <br>
+    <img src="data_explore.gif" width="800"/>
+    <br>
+<p>
+
 
 
 - [TREC-COVID](datasets/TREC-COVID.md) - scientific articles annotated by relevance (relevant, partially-relevant, and non-relevant) from [the TREC COVID track](https://ir.nist.gov/covidSubmit/) using [CORD-19 dataset](https://www.semanticscholar.org/cord19).
