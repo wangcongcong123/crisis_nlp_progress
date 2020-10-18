@@ -11,7 +11,7 @@
 
 <a name="datasets"></a>
 ### Datasets
-[Data Explorer](https://share.streamlit.io/wangcongcong123/crisis_nlp_progress/app.py)
+[Data Explorer - Demo](https://share.streamlit.io/wangcongcong123/crisis_nlp_progress/app.py)
 
 <p align="center">
     <br>
