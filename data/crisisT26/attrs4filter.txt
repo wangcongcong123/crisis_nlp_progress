@@ -1,1 +1,0 @@
-Information Type,Informativeness,Information Source

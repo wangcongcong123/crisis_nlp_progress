@@ -15,10 +15,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
 def read_jsonl(filepath):
     examples = []
-    with open(filepath, "r") as f:
+    with open(filepath, "r",encoding="utf-8") as f:
         for line in f:
             example = json.loads(line.strip())
             examples.append(example)
@@ -39,6 +38,8 @@ def get_attr_list(examples, attr_name):
     for example in examples:
         if isinstance(example[attr_name], list):
             attr_list.extend(example[attr_name])
+        if ", " in example[attr_name]:
+            attr_list.extend(example[attr_name].split(", "))
         if "," in example[attr_name]:
             attr_list.extend(example[attr_name].split(","))
         else:
@@ -69,7 +70,6 @@ def get_wordcloud(examples):
     wc = WordCloud(stopwords=STOPWORDS, margin=1, max_words=2000, background_color='white').generate(cleaned_text)
     return wc
 
-
 def get_data2path(scan_scope="data"):
     data2path = {}
     for folder_name in os.listdir(scan_scope):
@@ -96,8 +96,12 @@ def get_id(example):
 def filter_by_attr_options(examples, attr_options, attr_name):
     return_examples = []
     for example in examples:
-        if any(option in example[attr_name] for option in attr_options):
+        # if any(example[attr_name] in option for option in attr_options):
+        #     return_examples.append(example)
+        if set(example[attr_name].split(",")).intersection(set(attr_options)):
             return_examples.append(example)
+
+
     return return_examples
 
 
@@ -118,7 +122,7 @@ def get_len_stats(examples, tokenizer=lambda a: a.split()):
 
 
 def plot_data_dist(examples, savefig=None, show_boxplot=True, dataname=""):
-    std, avg, doclen2count, len_list = get_len_stats(examples)
+    std, avg, doclen2count, len_list = get_len_stats(examples) # by default using space splitter
     if show_boxplot:
         plt.subplot(121)
     else:
@@ -140,8 +144,6 @@ def plot_data_dist(examples, savefig=None, show_boxplot=True, dataname=""):
         logger.info(f"saved data dist fig to {savefig}")
         plt.savefig(savefig, bbox_inches='tight')
     plt.show()
-
-
 
 if __name__ == '__main__':
     examples = read_jsonl("data/eyewitness_tweets/hurricanes_eyewitness_annotations_2004.json")
